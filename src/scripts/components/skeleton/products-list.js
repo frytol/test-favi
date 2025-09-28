@@ -6,5 +6,5 @@ export function SkeletonProductsList() {
         Načítání…
     `
 
-    return component.firstElementChild
+    return component
 }

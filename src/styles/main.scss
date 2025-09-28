@@ -1,0 +1,28 @@
+// Variables
+@use './variables/root';
+
+// Components
+@use './components/header';
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    min-width: 20rem;
+    min-height: 100vh;
+    overflow: hidden;
+    overflow-y: visible;
+
+    &.no-scroll {
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+}
+
+body {
+    margin: 0;
+}
