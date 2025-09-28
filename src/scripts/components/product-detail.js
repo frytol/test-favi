@@ -1,11 +1,10 @@
-import { loadProduct } from '../app/load-product.js'
-
-export function ProductsCard(product) {
+export function ProductDetail(product) {
     const component = document.createElement('div')
 
-    component.className = 'x-products-card'
+    component.className = 'x-product-detail__content'
     component.innerHTML = `
-        <img class="x-products-card__image-file" src="${product.image_url}" alt="${product.name}" />
+        <button class="ui-button-close">Zavřít</button>
+        <img class="x-product__image-file" src="${product.image_url}" alt="${product.name}" />
         <span>${product.name}</span>
         <span>${product.price}</span>
         <span>${product.currency}</span>
@@ -14,10 +13,6 @@ export function ProductsCard(product) {
         <span>${product.review_quntity}</span>
         <span>${product.like}</span>
     `
-
-    component.addEventListener('click', () => {
-        loadProduct(product.id)
-    })
 
     return component
 }

@@ -1,6 +1,9 @@
 // Variables
 @use './variables/root';
 
+// Ui
+@use './ui/button-close';
+
 // Components
 @use './components/header';
 @use './components/products-list';

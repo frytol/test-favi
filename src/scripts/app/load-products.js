@@ -9,7 +9,7 @@ function delay(ms) {
     return new Promise(resolve => setTimeout(resolve, ms))
 }
 
-async function loadProducts() {
+export async function loadProducts() {
     const skeleton = SkeletonProductsList()
 
     container.innerHTML = ''
@@ -17,13 +17,11 @@ async function loadProducts() {
 
     try {
         const response = await fetch('/src/api/products.json')
-
         await delay(API_DELAY)
 
         if (!response.ok) throw new Error('Chyba při načítání produktů')
 
         const products = await response.json()
-
         const productListElement = ProductsList(products)
 
         container.innerHTML = ''
@@ -33,5 +31,3 @@ async function loadProducts() {
         console.error(error)
     }
 }
-
-loadProducts()
