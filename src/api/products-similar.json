@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "Velká rozkládací pohovka HEWLET MODEL 2 Šedá-černá",
+    "description": "Moderní trojmístná sedačka navržená pro maximální pohodlí při sledování televize i odpočinku po náročném dni. Měkké čalounění v neutrálním odstínu doplňuje minimalistický design, který snadno zapadne do jakéhokoli interiéru. Díky praktickému rozkládacímu mechanismu lze sedačku jednoduše přeměnit na lůžko pro příležitostné přespání. Pevná konstrukce a kvalitní potah zaručují dlouhou životnost a snadnou údržbu.",
+    "price": "17790",
+    "currency": "czk",
+    "delivery": 14,
+    "review": 3.4,
+    "review_quntity": 42,
+    "like": 107,
+    "image_url": "https://img.cz.favicdn.net/images/products/600x600/06590019-7399-4a39-b478-c590213e5322.webp",
+    "parameters": [
+        {
+            "name": "Šířka",
+            "value": "281 cm"
+        },
+        {
+            "name": "Výška",
+            "value": "73 - 88 cm"
+        },
+        {
+            "name": "Hloubka",
+            "value": "191 cm"
+        },
+        {
+            "name": "Výška sedu",
+            "value": "42 cm"
+        }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Velká rozkládací pohovka HEWLET MODEL 2 Šedá-černá",
+    "description": "Moderní trojmístná sedačka navržená pro maximální pohodlí při sledování televize i odpočinku po náročném dni. Měkké čalounění v neutrálním odstínu doplňuje minimalistický design, který snadno zapadne do jakéhokoli interiéru. Díky praktickému rozkládacímu mechanismu lze sedačku jednoduše přeměnit na lůžko pro příležitostné přespání. Pevná konstrukce a kvalitní potah zaručují dlouhou životnost a snadnou údržbu.",
+    "price": "17790",
+    "currency": "czk",
+    "delivery": 14,
+    "review": 3.4,
+    "review_quntity": 42,
+    "like": 42,
+    "image_url": "https://img.cz.favicdn.net/images/products/600x600/06602ca8-0a3b-4ae2-902e-8bb690c2a4fd.webp",
+    "parameters": [
+        {
+            "name": "Šířka",
+            "value": "281 cm"
+        },
+        {
+            "name": "Výška",
+            "value": "73 - 88 cm"
+        },
+        {
+            "name": "Hloubka",
+            "value": "191 cm"
+        },
+        {
+            "name": "Výška sedu",
+            "value": "42 cm"
+        }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Velká rozkládací pohovka HEWLET MODEL 2 Šedá-černá",
+    "description": "Moderní trojmístná sedačka navržená pro maximální pohodlí při sledování televize i odpočinku po náročném dni. Měkké čalounění v neutrálním odstínu doplňuje minimalistický design, který snadno zapadne do jakéhokoli interiéru. Díky praktickému rozkládacímu mechanismu lze sedačku jednoduše přeměnit na lůžko pro příležitostné přespání. Pevná konstrukce a kvalitní potah zaručují dlouhou životnost a snadnou údržbu.",
+    "price": "17790",
+    "currency": "czk",
+    "delivery": 14,
+    "review": 3.4,
+    "review_quntity": 42,
+    "like": 66,
+    "image_url": "https://img.cz.favicdn.net/images/products/600x600/3c673ece-b598-40c2-8fc9-431ad5a7eec2.webp",
+    "parameters": [
+        {
+            "name": "Šířka",
+            "value": "281 cm"
+        },
+        {
+            "name": "Výška",
+            "value": "73 - 88 cm"
+        },
+        {
+            "name": "Hloubka",
+            "value": "191 cm"
+        },
+        {
+            "name": "Výška sedu",
+            "value": "42 cm"
+        }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Velká rozkládací pohovka HEWLET MODEL 2 Šedá-černá",
+    "description": "Moderní trojmístná sedačka navržená pro maximální pohodlí při sledování televize i odpočinku po náročném dni. Měkké čalounění v neutrálním odstínu doplňuje minimalistický design, který snadno zapadne do jakéhokoli interiéru. Díky praktickému rozkládacímu mechanismu lze sedačku jednoduše přeměnit na lůžko pro příležitostné přespání. Pevná konstrukce a kvalitní potah zaručují dlouhou životnost a snadnou údržbu.",
+    "price": "17790",
+    "currency": "czk",
+    "delivery": 14,
+    "review": 3.4,
+    "review_quntity": 42,
+    "like": 255,
+    "image_url": "https://img.cz.favicdn.net/images/products/600x600/171a0a8b-57c7-4062-91bc-3194571265ff.webp",
+    "parameters": [
+        {
+            "name": "Šířka",
+            "value": "281 cm"
+        },
+        {
+            "name": "Výška",
+            "value": "73 - 88 cm"
+        },
+        {
+            "name": "Hloubka",
+            "value": "191 cm"
+        },
+        {
+            "name": "Výška sedu",
+            "value": "42 cm"
+        }
+    ]
+  }
+]

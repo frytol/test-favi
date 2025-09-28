@@ -2,7 +2,6 @@ import { loadProduct } from '../app/load-product.js'
 
 export function ProductsCard(product) {
     const component = document.createElement('div')
-
     component.className = 'x-products-card'
     component.innerHTML = `
         <img class="x-products-card__image-file" src="${product.image_url}" alt="${product.name}" />

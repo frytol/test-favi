@@ -1,13 +1,11 @@
-import { ProductsList } from '../components/products-list.js'
+import { delay } from './utils/delay.js'
+
 import { SkeletonProductsList } from '../components/skeleton/products-list.js'
 import { ComponentError } from '../components/status/error.js'
+import { ProductsList } from '../components/products-list.js'
 
 const API_DELAY = 5000
 const container = document.getElementById('product-list')
-
-function delay(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms))
-}
 
 export async function loadProducts() {
     const skeleton = SkeletonProductsList()
@@ -22,10 +20,10 @@ export async function loadProducts() {
         if (!response.ok) throw new Error('Chyba při načítání produktů')
 
         const products = await response.json()
-        const productListElement = ProductsList(products)
 
+        const component = ProductsList(products)
         container.innerHTML = ''
-        container.appendChild(productListElement)
+        container.appendChild(component)
     } catch (error) {
         container.innerHTML = ComponentError()
         console.error(error)

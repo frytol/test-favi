@@ -1,14 +1,18 @@
-import { ProductDetail } from '../components/product-detail.js'
+import { delay } from './utils/delay.js'
+
 import { SkeletonProductDetail } from '../components/skeleton/product-detail.js'
 import { ComponentError } from '../components/status/error.js'
+import { ProductDetail } from '../components/product-detail.js'
 
 const API_DELAY = 5000
 
-function delay(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms))
-}
-
 export async function loadProduct(productId) {
+    const existing = document.querySelector('.x-product-detail')
+
+    if (existing) {
+        existing.remove()
+    }
+
     history.pushState(null, '', `/product/${productId}/detail`)
 
     const container = document.createElement('div')
@@ -24,23 +28,18 @@ export async function loadProduct(productId) {
 
         if (!response.ok) throw new Error('Chyba při načítání detailu produktu')
 
-        const allProducts = await response.json()
-        const product = allProducts.find(p => p.id === productId)
+        const products = await response.json()
+        const product = products.find(item => item.id === productId)
 
         if (!product) {
-            container.innerHTML = ComponentError('Produkt nenalezen')
+            container.innerHTML = ComponentError('Produkt nenalezen') // @future use for better information
+
             return
         }
 
-        const detailComponent = ProductDetail(product)
+        const component = ProductDetail(product)
         container.innerHTML = ''
-        container.appendChild(detailComponent)
-
-        detailComponent.querySelector('.ui-button-close').addEventListener('click', () => {
-            container.remove()
-            history.pushState(null, '', '/')
-        })
-
+        container.appendChild(component)
     } catch (error) {
         container.innerHTML = ComponentError()
         console.error(error)

@@ -1,15 +1,15 @@
 import { ComponentEmpty } from './status/empty.js'
 import { ProductsCard } from './products-card.js'
 
-export function ProductsList(products = []) {
+export function ProductsSimilarList(products = []) {
     const component = document.createElement('div')
     component.innerHTML = `
-        <div class="x-products-list__items">
+        <div class="x-products-similar-list__items">
             ${!products.length ? ComponentEmpty() : ''}
         </div>
     `
 
-    const items = component.querySelector('.x-products-list__items')
+    const items = component.querySelector('.x-products-similar-list__items')
 
     if (products.length) {
         products.forEach(product => {
