@@ -1,0 +1,15 @@
+.x-products-card {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    border-width: .0625rem;
+    border-style: solid;
+    border-color: var(--color-border);
+    border-radius: 1rem;
+    overflow: hidden;
+
+    &__image-file {
+        display: flex;
+        width: 100%;
+    }
+}
