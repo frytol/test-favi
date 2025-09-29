@@ -138,6 +138,6 @@ export function ProductDetail(product) {
     setActiveTab(path.includes('/podobne-produkty') ? 'similar' : 'detail')
 
     setTimeout(prefetchSimilar, 100)
-    
+
     return component
 }
