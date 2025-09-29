@@ -4,7 +4,12 @@
 // Ui
 @use './ui/button-close';
 
+// layouts
+@use './global/main';
+
 // Components
+@use './components/filter';
+@use './components/footer';
 @use './components/header';
 @use './components/products-list';
 @use './components/products-card';

@@ -1,0 +1,14 @@
+.main {
+    display: flex;
+    margin-block: 1.25rem;
+
+    &--list-filter {
+        display: grid;
+        grid-template-columns: 20rem 1fr;
+        gap: 1.25rem;
+    }
+
+    &--padding-inline {
+        padding-inline: 1.25rem;
+    }
+}

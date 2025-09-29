@@ -1,15 +1,123 @@
 .x-products-card {
     cursor: pointer;
+    position: relative;
     display: flex;
     flex-direction: column;
+    gap: .5rem;
     border-width: .0625rem;
     border-style: solid;
     border-color: var(--color-border);
     border-radius: 1rem;
     overflow: hidden;
 
+    &__image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        aspect-ratio: 1/1;
+    }
+
     &__image-file {
         display: flex;
         width: 100%;
+    }
+
+    &__like {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        padding-block: .125rem;
+        padding-inline: .25rem;
+        gap: .25rem;
+        top: .5rem;
+        right: .5rem;
+        border-radius: 1rem;
+        color: var(--color-brand);
+        background-color: hsla(0, 0%, 100%, .84);
+    }
+
+    &__like-icon-file {
+        width: 1.5rem;
+        aspect-ratio: 1/1;
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        gap: .25rem;
+        padding-block-end: .5rem;
+        padding-inline: .75rem;
+    }
+
+    &__review {
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+    }
+
+    &__stars {
+        display: flex;
+        flex-direction: row;
+        gap: .25rem;
+    }
+
+    &__stars-value {
+        font-size: 12px;
+        color: var(--color-brand);
+    }
+
+    &__star-icon-file {
+        width: 1.25rem;
+        aspect-ratio: 1/1;
+        color: var(--color-star);
+    }
+
+    &__name {
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        font-size: 15px;
+    }
+
+    &__price {
+        font-weight: 600;
+        font-size: 19px;
+    }
+
+    &__delivery {
+        display: flex;
+        justify-content: flex-start;
+    }
+
+    &__delivery-content {
+        display: flex;
+        align-items: center;
+        gap: .25rem;
+        padding-block: .125rem;
+        padding-inline: .25rem;
+        border-width: .0625rem;
+        border-style: solid;
+        border-color: var(--color-border);
+        border-radius: .5rem;
+        font-weight: 600;
+        font-size: 12px;
+        color: var(--color-gray-1);
+
+        &--stock {
+            color: var(--color-green);
+            background-color: var(--color-green-light);
+            border-color: var(--color-green);
+        }
+    }
+
+    &__delivery-icon-file {
+        width: 1.5rem;
+        aspect-ratio: 1/1;
+    }
+
+    &__delivery-text {
+        color: var(--color-black);
     }
 }
