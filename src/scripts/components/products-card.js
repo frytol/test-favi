@@ -21,11 +21,11 @@ export function ProductsCard(product) {
                 <div class="x-products-card__stars">
                     ${renderStars(product.review)}
                 </div>
-                <span>${product.review}</span>
                 <span class="x-products-card__stars-value">${product.review_quntity}x</span>
             </span>
             <span class="x-products-card__name">${product.name}</span>
             <span class="x-products-card__price">
+            <span>${product.price}</span>
                 <span>${formatCurrency(product.currency)}</span>
             </span>
             <div class="x-products-card__delivery">

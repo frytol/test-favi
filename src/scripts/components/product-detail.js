@@ -38,8 +38,17 @@ export function ProductDetail(product) {
     buttonSimilar.textContent = 'Podobné produkty'
     buttonSimilar.dataset.tab = 'similar'
 
+    const buttonClose = document.createElement('button')
+    buttonClose.className = 'ui-button-close'
+    buttonClose.innerHTML = `
+        <svg class="ui-button-close__icon-file" aria-hidden="true">
+            <use href="/images/sprite.svg#icon-x-mark"></use>
+        </svg>
+    `
+
     tabs.appendChild(buttonProduct)
     tabs.appendChild(buttonSimilar)
+    tabs.appendChild(buttonClose)
 
     const body = document.createElement('div')
     body.className = 'x-product-detail__body'
@@ -58,7 +67,6 @@ export function ProductDetail(product) {
             </div>
         </div>
         <div class="x-product-detail__product-content">
-            <button class="ui-button-close">Zavřít</button>
             <span class="x-product-detail__product-review">
                 <div class="x-product-detail__product-stars">
                     ${renderStars(product.review)}
@@ -90,7 +98,10 @@ export function ProductDetail(product) {
     buttonProduct.addEventListener('click', () => setActiveTab('detail'))
     buttonSimilar.addEventListener('click', () => setActiveTab('similar'))
 
-    detailContent.querySelector('.ui-button-close').addEventListener('click', () => {
+    buttonClose.addEventListener('click', () => {
+        document.documentElement.classList.remove('no-scroll')
+        const container = document.querySelector('.x-product-detail')
+        container?.classList.remove('open')
         component.remove()
         history.pushState(null, '', '/')
     })

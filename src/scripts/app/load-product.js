@@ -21,6 +21,8 @@ export async function loadProduct(productId) {
     const skeleton = SkeletonProductDetail()
     container.appendChild(skeleton)
     document.body.appendChild(container)
+    document.documentElement.classList.add('no-scroll')
+    container.classList.add('open')
 
     try {
         const response = await fetch('/src/api/products.json')
