@@ -9,25 +9,7 @@
     "review": 3.4,
     "review_quntity": 42,
     "like": 107,
-    "image_url": "https://img.cz.favicdn.net/images/products/600x600/06590019-7399-4a39-b478-c590213e5322.webp",
-    "parameters": [
-        {
-            "name": "Šířka",
-            "value": "281 cm"
-        },
-        {
-            "name": "Výška",
-            "value": "73 - 88 cm"
-        },
-        {
-            "name": "Hloubka",
-            "value": "191 cm"
-        },
-        {
-            "name": "Výška sedu",
-            "value": "42 cm"
-        }
-    ]
+    "image_url": "https://img.cz.favicdn.net/images/products/600x600/06590019-7399-4a39-b478-c590213e5322.webp"
   },
   {
     "id": 2,
@@ -39,25 +21,7 @@
     "review": 3.4,
     "review_quntity": 42,
     "like": 42,
-    "image_url": "https://img.cz.favicdn.net/images/products/600x600/06602ca8-0a3b-4ae2-902e-8bb690c2a4fd.webp",
-    "parameters": [
-        {
-            "name": "Šířka",
-            "value": "281 cm"
-        },
-        {
-            "name": "Výška",
-            "value": "73 - 88 cm"
-        },
-        {
-            "name": "Hloubka",
-            "value": "191 cm"
-        },
-        {
-            "name": "Výška sedu",
-            "value": "42 cm"
-        }
-    ]
+    "image_url": "https://img.cz.favicdn.net/images/products/600x600/06602ca8-0a3b-4ae2-902e-8bb690c2a4fd.webp"
   },
   {
     "id": 3,
@@ -69,25 +33,7 @@
     "review": 3.4,
     "review_quntity": 42,
     "like": 66,
-    "image_url": "https://img.cz.favicdn.net/images/products/600x600/3c673ece-b598-40c2-8fc9-431ad5a7eec2.webp",
-    "parameters": [
-        {
-            "name": "Šířka",
-            "value": "281 cm"
-        },
-        {
-            "name": "Výška",
-            "value": "73 - 88 cm"
-        },
-        {
-            "name": "Hloubka",
-            "value": "191 cm"
-        },
-        {
-            "name": "Výška sedu",
-            "value": "42 cm"
-        }
-    ]
+    "image_url": "https://img.cz.favicdn.net/images/products/600x600/3c673ece-b598-40c2-8fc9-431ad5a7eec2.webp"
   },
   {
     "id": 4,
@@ -99,24 +45,6 @@
     "review": 3.4,
     "review_quntity": 42,
     "like": 255,
-    "image_url": "https://img.cz.favicdn.net/images/products/600x600/171a0a8b-57c7-4062-91bc-3194571265ff.webp",
-    "parameters": [
-        {
-            "name": "Šířka",
-            "value": "281 cm"
-        },
-        {
-            "name": "Výška",
-            "value": "73 - 88 cm"
-        },
-        {
-            "name": "Hloubka",
-            "value": "191 cm"
-        },
-        {
-            "name": "Výška sedu",
-            "value": "42 cm"
-        }
-    ]
+    "image_url": "https://img.cz.favicdn.net/images/products/600x600/171a0a8b-57c7-4062-91bc-3194571265ff.webp"
   }
 ]

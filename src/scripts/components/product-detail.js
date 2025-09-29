@@ -88,6 +88,15 @@ export function ProductDetail(product) {
                 <span class="x-product-detail__product-stars-value">${product.review_quntity}x</span>
             </span>
             <span class="x-product-detail__product-name">${product.name}</span>
+            <p class="x-product-detail__description">${product.description}</p>
+            <div class="x-product-detail__product-parameters">
+                ${product.parameters.map(param => `
+                    <div class="x-product-detail__product-parameter">
+                        <span class="x-product-detail__product-parameter-name">${param.name}</span>
+                        <span class="x-product-detail__product-parameter-value">${param.value}</span>
+                    </div>
+                `).join('')}
+            </div>
             <div class="x-product-detail__product-delivery">
                 <span class="x-product-detail__product-delivery-content ${product.delivery === 0 ? 'x-product-detail__product-delivery-content--stock' : ''}">
                     <svg class="x-product-detail__product-delivery-icon-file" aria-hidden="true">
