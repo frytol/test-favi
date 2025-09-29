@@ -1,4 +1,7 @@
 import { loadProductsSimilar } from '../app/load-products-similar.js'
+import { formatDelivery } from '../app/utils/format-delivery.js'
+import { formatCurrency } from '../app/utils/format-currency.js'
+import { renderStars } from '../app/utils/render-stars.js'
 
 export function ProductDetail(product) {
     function setActiveTab(tab) {
@@ -45,15 +48,39 @@ export function ProductDetail(product) {
     const detailContent = document.createElement('div')
     detailContent.className = 'x-product-detail__product'
     detailContent.innerHTML = `
-        <button class="ui-button-close">Zavřít</button>
-        <img class="x-product__image-file" src="${product.image_url}" alt="${product.name}" />
-        <span>${product.name}</span>
-        <span>${product.price}</span>
-        <span>${product.currency}</span>
-        <span>${product.delivery}</span>
-        <span>${product.review}</span>
-        <span>${product.review_quntity}</span>
-        <span>${product.like}</span>
+        <div class="x-product-detail__product-image">
+            <img class="x-product-detail__product-image-file" src="${product.image_url}" alt="${product.name}" />
+            <div class="x-product-detail__product-like">
+                <svg class="x-product-detail__product-like-icon-file" aria-hidden="true">
+                    <use href="/images/sprite.svg#icon-heart-solid"></use>
+                </svg>
+                ${product.like}
+            </div>
+        </div>
+        <div class="x-product-detail__product-content">
+            <button class="ui-button-close">Zavřít</button>
+            <span class="x-product-detail__product-review">
+                <div class="x-product-detail__product-stars">
+                    ${renderStars(product.review)}
+                </div>
+                <span class="x-product-detail__product-stars-value">${product.review_quntity}x</span>
+            </span>
+            <span class="x-product-detail__product-name">${product.name}</span>
+            <div class="x-product-detail__product-delivery">
+                <span class="x-product-detail__product-delivery-content ${product.delivery === 0 ? 'x-product-detail__product-delivery-content--stock' : ''}">
+                    <svg class="x-product-detail__product-delivery-icon-file" aria-hidden="true">
+                        <use href="/images/sprite.svg#icon-archive-box-solid"></use>
+                    </svg>
+                    <span class="x-product-detail__product-delivery-text">
+                        ${formatDelivery(product.delivery)}
+                    </span>
+                </span>
+            </div>
+            <span class="x-product-detail__product-price">
+                <span>${product.price}</span>
+                <span>${formatCurrency(product.currency)}</span>
+            </span>
+        </div>
     `
 
     const similarListContainer = document.createElement('div')

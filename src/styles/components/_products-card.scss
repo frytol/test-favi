@@ -89,6 +89,7 @@
     &__delivery {
         display: flex;
         justify-content: flex-start;
+        width: 100%;
     }
 
     &__delivery-content {
@@ -113,7 +114,7 @@
     }
 
     &__delivery-icon-file {
-        width: 1.5rem;
+        width: 1.25rem;
         aspect-ratio: 1/1;
     }
 

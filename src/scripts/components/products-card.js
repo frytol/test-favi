@@ -12,7 +12,7 @@ export function ProductsCard(product) {
         </div>
         <div class="x-products-card__like">
             <svg class="x-products-card__like-icon-file" aria-hidden="true">
-                <use href="./images/sprite.svg#icon-heart-solid"></use>
+                <use href="/images/sprite.svg#icon-heart-solid"></use>
             </svg>
             ${product.like}
         </div>
@@ -26,19 +26,18 @@ export function ProductsCard(product) {
             </span>
             <span class="x-products-card__name">${product.name}</span>
             <span class="x-products-card__price">
-                <span>${product.price}</span>
                 <span>${formatCurrency(product.currency)}</span>
             </span>
             <div class="x-products-card__delivery">
                 <span class="x-products-card__delivery-content ${product.delivery === 0 ? 'x-products-card__delivery-content--stock' : ''}">
                     <svg class="x-products-card__delivery-icon-file" aria-hidden="true">
-                        <use href="./images/sprite.svg#icon-archive-box-solid"></use>
+                        <use href="/images/sprite.svg#icon-archive-box-solid"></use>
                     </svg>
                     <span class="x-products-card__delivery-text">
                         ${formatDelivery(product.delivery)}
                     </span>
                 </span>
-            <div>
+            </div>
         </div>
     `
 

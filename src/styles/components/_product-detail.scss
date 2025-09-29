@@ -1,8 +1,123 @@
 .x-product-detail {
+    container-type: inline-size;
+    container-name: product-detail;
 
     &__tabs {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         width: 100%;
+    }
+
+    &__product {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2rem;
+        padding-block: 3rem;
+        padding-inline: 2rem;
+
+        @container product-detail (min-width: 800px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    &__product-image {
+        position: relative;
+    }
+
+    &__product-image-file {
+        width: 100%;
+    }
+
+    &__product-content {
+        display: flex;
+        flex-direction: column;
+        gap: .5rem;
+    }
+
+    &__product-like {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        padding-block: .125rem;
+        padding-inline: .25rem;
+        gap: .25rem;
+        top: .5rem;
+        right: .5rem;
+        border-radius: 1rem;
+        color: var(--color-brand);
+        background-color: hsla(0, 0%, 100%, .84);
+    }
+
+    &__product-like-icon-file {
+        width: 1.5rem;
+        aspect-ratio: 1/1;
+    }
+
+    &__product-review {
+        display: flex;
+        align-items: center;
+        gap: .5rem;
+    }
+
+    &__product-stars {
+        display: flex;
+        flex-direction: row;
+        gap: .25rem;
+    }
+
+    &__product-stars-value {
+        font-size: 12px;
+        color: var(--color-brand);
+    }
+
+    &__product-star-icon-file {
+        width: 1.25rem;
+        aspect-ratio: 1/1;
+        color: var(--color-star);
+    }
+
+    &__product-name {
+        font-size: 24px;
+    }
+
+    &__product-price {
+        font-weight: 600;
+        font-size: 28px;
+    }
+
+    &__product-delivery {
+        display: flex;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    &__product-delivery-content {
+        display: flex;
+        align-items: center;
+        gap: .25rem;
+        padding-block: .125rem;
+        padding-inline: .25rem;
+        border-width: .0625rem;
+        border-style: solid;
+        border-color: var(--color-border);
+        border-radius: .5rem;
+        font-weight: 600;
+        font-size: 12px;
+        color: var(--color-gray-1);
+
+        &--stock {
+            color: var(--color-green);
+            background-color: var(--color-green-light);
+            border-color: var(--color-green);
+        }
+    }
+
+    &__product-delivery-icon-file {
+        width: 1.25rem;
+        aspect-ratio: 1/1;
+    }
+
+    &__product-delivery-text {
+        color: var(--color-black);
     }
 }
