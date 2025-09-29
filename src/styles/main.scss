@@ -3,6 +3,7 @@
 
 // Ui
 @use './ui/button-close';
+@use './ui/button-tab';
 
 // layouts
 @use './global/main';
@@ -11,8 +12,9 @@
 @use './components/filter';
 @use './components/footer';
 @use './components/header';
-@use './components/products-list';
+@use './components/product-detail';
 @use './components/products-card';
+@use './components/products-list';
 
 *,
 *:before,

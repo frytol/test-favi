@@ -2,11 +2,15 @@ import { loadProductsSimilar } from '../app/load-products-similar.js'
 
 export function ProductDetail(product) {
     function setActiveTab(tab) {
+        [buttonProduct, buttonSimilar].forEach(btn => btn.classList.remove('active'))
+
         if (tab === 'detail') {
+            buttonProduct.classList.add('active')
             history.pushState(null, '', `/product/${product.id}/detail`)
             body.innerHTML = ''
             body.appendChild(detailContent)
         } else if (tab === 'similar') {
+            buttonSimilar.classList.add('active')
             history.pushState(null, '', `/product/${product.id}/podobne-produkty`)
             body.innerHTML = ''
             body.appendChild(similarListContainer)
@@ -22,10 +26,12 @@ export function ProductDetail(product) {
     tabs.className = 'x-product-detail__tabs'
 
     const buttonProduct = document.createElement('button')
+    buttonProduct.className = 'ui-button-tab'
     buttonProduct.textContent = 'Produkt'
     buttonProduct.dataset.tab = 'detail'
 
     const buttonSimilar = document.createElement('button')
+    buttonSimilar.className = 'ui-button-tab'
     buttonSimilar.textContent = 'Podobné produkty'
     buttonSimilar.dataset.tab = 'similar'
 
