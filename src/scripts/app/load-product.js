@@ -34,7 +34,7 @@ export async function loadProduct(productId) {
         const product = products.find(item => item.id === productId)
 
         if (!product) {
-            container.innerHTML = ComponentError('Produkt nenalezen') // @future use for better information
+            container.innerHTML = ComponentError('Produkt nenalezen') // @future - Use for better information
 
             return
         }

@@ -8,6 +8,7 @@ const match = window.location.pathname.match(/^\/product\/(\d+)\/detail$/)
 if (match) {
     const productId = parseInt(match[1], 10)
     loadProduct(productId)
+    loadProducts() /* @future - Bette solution, loading after close ProductDetail */
 } else {
     loadProducts()
 }
