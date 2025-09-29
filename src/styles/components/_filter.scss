@@ -1,6 +1,17 @@
 .x-filter {
+    container-type: inline-size;
+    container-name: filter;
+
     display: flex;
-    width: 100%;
-    height: 80vh;
-    background-color: var(--color-header);
+
+    &__content {
+        display: flex;
+        width: 100%;
+        height: 80vh;
+        background-color: var(--color-header);
+
+        @container filter (min-width: 20.0625rem) {
+            height: 7.5rem;
+        }
+    }
 }

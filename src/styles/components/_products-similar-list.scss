@@ -10,11 +10,11 @@
         width: 100%;
         gap: 1rem;
 
-        @container products-similar-list (min-width: 500px) {
+        @container products-similar-list (min-width: 31.25rem) {
             grid-template-columns: repeat(3, 1fr);
         }
         
-        @container products-similar-list (min-width: 800px) {
+        @container products-similar-list (min-width: 50rem) {
             grid-template-columns: repeat(4, 1fr);
         }
     }

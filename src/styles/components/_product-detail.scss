@@ -37,7 +37,7 @@
         grid-template-columns: repeat(1, 1fr);
         gap: 2rem;
 
-        @container product-detail (min-width: 800px) {
+        @container product-detail (min-width: 50rem) {
             grid-template-columns: repeat(2, 1fr);
         }
     }
@@ -88,7 +88,7 @@
     }
 
     &__product-stars-value {
-        font-size: 12px;
+        font-size: .75rem;
         color: var(--color-brand);
     }
 
@@ -99,12 +99,12 @@
     }
 
     &__product-name {
-        font-size: 24px;
+        font-size: 1.5rem;
     }
 
     &__product-price {
         font-weight: 600;
-        font-size: 28px;
+        font-size: 1.75rem;
     }
 
     &__product-delivery {
@@ -124,7 +124,7 @@
         border-color: var(--color-border);
         border-radius: .5rem;
         font-weight: 600;
-        font-size: 12px;
+        font-size: .75rem;
         color: var(--color-gray-1);
 
         &--stock {
