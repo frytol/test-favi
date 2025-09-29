@@ -42,6 +42,9 @@ export async function loadProduct(productId) {
         const component = ProductDetail(product)
         container.innerHTML = ''
         container.appendChild(component)
+
+        const buttonProduct = component.querySelector('.x-product-detail')
+        if (buttonProduct) buttonProduct.focus()
     } catch (error) {
         container.innerHTML = ComponentError()
         console.error(error)

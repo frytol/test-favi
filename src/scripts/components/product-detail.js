@@ -59,7 +59,7 @@ export function ProductDetail(product) {
     detailContent.innerHTML = `
         <div class="x-product-detail__product-image">
             <img class="x-product-detail__product-image-file" src="${product.image_url}" alt="${product.name}" />
-            <div class="x-product-detail__product-like">
+            <div class="x-product-detail__product-like ui-focus ui-focus--br-1" role="button" tabindex="0" aria-label="přidat produkt ${product.name} do oblíbeních">
                 <svg class="x-product-detail__product-like-icon-file" aria-hidden="true">
                     <use href="/images/sprite.svg#icon-heart-solid"></use>
                 </svg>
@@ -104,6 +104,8 @@ export function ProductDetail(product) {
         container?.classList.remove('open')
         component.remove()
         history.pushState(null, '', '/')
+
+        // @future - Focus after close to this item in list
     })
 
     component.appendChild(tabs)

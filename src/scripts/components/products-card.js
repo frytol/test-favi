@@ -5,12 +5,15 @@ import { renderStars } from '../app/utils/render-stars.js'
 
 export function ProductsCard(product) {
     const component = document.createElement('div')
-    component.className = 'x-products-card'
+    component.className = 'x-products-card ui-focus ui-focus--br-1'
+    component.setAttribute('role', 'button')
+    component.setAttribute('tabindex', '0')
+    component.setAttribute('aria-label', `Zobrazit detail produktu ${product.name}`)
     component.innerHTML = `
         <div class="x-products-card__image">
             <img class="x-products-card__image-file" src="${product.image_url}" alt="${product.name}" />
         </div>
-        <div class="x-products-card__like">
+        <div class="x-products-card__like ui-focus ui-focus--br-1" role="button" tabindex="0" aria-label="přidat produkt ${product.name} do oblíbeních">
             <svg class="x-products-card__like-icon-file" aria-hidden="true">
                 <use href="/images/sprite.svg#icon-heart-solid"></use>
             </svg>

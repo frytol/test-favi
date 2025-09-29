@@ -1,0 +1,14 @@
+.ui-focus {
+   &:focus-visible {
+        outline-width: .125rem;
+        outline-style: solid;
+        outline-color: var(--color-brand);
+        outline-offset: 0;
+    }
+
+    &--br-1 {
+        &:focus-visible {
+            border-radius: 1rem;
+        }
+    }
+}
