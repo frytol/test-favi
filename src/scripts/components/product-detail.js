@@ -34,6 +34,7 @@ export function ProductDetail(product) {
         loadProductsSimilar(hidden, true)
     }
 
+    const path = window.location.pathname
     let hasPrefetched = false
 
     const component = document.createElement('div')
@@ -134,7 +135,7 @@ export function ProductDetail(product) {
     component.appendChild(tabs)
     component.appendChild(body)
 
-    setActiveTab('detail') /* @future - After reload check /detail or /podobne-produkty */
+    setActiveTab(path.includes('/podobne-produkty') ? 'similar' : 'detail')
 
     setTimeout(prefetchSimilar, 100)
 

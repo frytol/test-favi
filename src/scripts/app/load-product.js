@@ -6,14 +6,12 @@ import { ProductDetail } from '../components/product-detail.js'
 
 const API_DELAY = 5000
 
-export async function loadProduct(productId) {
+export async function loadProduct(productId, tab = 'detail') {
     const existing = document.querySelector('.x-product-detail')
 
     if (existing) {
         existing.remove()
     }
-
-    history.pushState(null, '', `/product/${productId}/detail`)
 
     const container = document.createElement('div')
     container.className = 'x-product-detail'
@@ -39,7 +37,7 @@ export async function loadProduct(productId) {
             return
         }
 
-        const component = ProductDetail(product)
+        const component = ProductDetail(product, tab)
         container.innerHTML = ''
         container.appendChild(component)
 
