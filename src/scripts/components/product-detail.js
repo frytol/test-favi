@@ -4,7 +4,7 @@ import { formatCurrency } from '../app/utils/format-currency.js'
 import { renderStars } from '../app/utils/render-stars.js'
 
 export function ProductDetail(product) {
-    function setActiveTab(tab) {
+    async function setActiveTab(tab) {
         [buttonProduct, buttonSimilar].forEach(btn => btn.classList.remove('active'))
 
         if (tab === 'detail') {
@@ -16,12 +16,26 @@ export function ProductDetail(product) {
             buttonSimilar.classList.add('active')
             history.pushState(null, '', `/product/${product.id}/podobne-produkty`)
             body.innerHTML = ''
-            body.appendChild(similarListContainer)
 
-            loadProductsSimilar(similarListContainer)
+            await loadProductsSimilar(similarListContainer, true)
+
+            body.appendChild(similarListContainer)
         }
     }
-    
+
+    function prefetchSimilar() {
+        if (hasPrefetched) return
+        hasPrefetched = true
+
+        const hidden = document.createElement('div')
+        hidden.style.display = 'none'
+        component.appendChild(hidden)
+
+        loadProductsSimilar(hidden, true)
+    }
+
+    let hasPrefetched = false
+
     const component = document.createElement('div')
     component.className = 'x-product-detail__content'
 
@@ -112,6 +126,8 @@ export function ProductDetail(product) {
     component.appendChild(body)
 
     setActiveTab('detail') /* @future - After reload check /detail or /podobne-produkty */
+
+    setTimeout(prefetchSimilar, 100)
 
     return component
 }
