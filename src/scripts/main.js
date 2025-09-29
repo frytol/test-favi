@@ -3,7 +3,7 @@ import '../styles/main.scss'
 import { loadProduct } from './app/load-product.js'
 import { loadProducts } from './app/load-products.js'
 
-const match = window.location.pathname.match(/^\/product\/(\d+)\/detail$/)
+const match = window.location.pathname.match(/^\/product\/(\d+)\/(detail|podobne-produkty)$/)
 
 if (match) {
     const productId = parseInt(match[1], 10)

@@ -111,7 +111,7 @@ export function ProductDetail(product) {
     component.appendChild(tabs)
     component.appendChild(body)
 
-    setActiveTab('detail')
+    setActiveTab('detail') /* @future - After reload check /detail or /podobne-produkty */
 
     return component
 }
