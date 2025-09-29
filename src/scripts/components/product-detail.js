@@ -85,7 +85,7 @@ export function ProductDetail(product) {
 
     const similarListContainer = document.createElement('div')
     similarListContainer.id = 'product-similar-list'
-    similarListContainer.className = 'x-product-similar-list'
+    similarListContainer.className = 'x-products-similar-list'
 
     buttonProduct.addEventListener('click', () => setActiveTab('detail'))
     buttonSimilar.addEventListener('click', () => setActiveTab('similar'))
