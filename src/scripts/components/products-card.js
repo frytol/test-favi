@@ -45,6 +45,7 @@ export function ProductsCard(product) {
     `
 
     component.addEventListener('click', () => {
+        history.replaceState(null, '', `/product/${product.id}/detail`)
         loadProduct(product.id)
     })
 

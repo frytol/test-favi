@@ -7,13 +7,12 @@ import { ProductsSimilarList } from '../components/products-similar-list.js'
 const API_DELAY = 5000
 
 let cachedProducts = null
-let cachedComponent = null
 let loading = null
 
 export async function loadProductsSimilar(container, useCache = true) {
-    if (useCache && cachedComponent) {
+    if (useCache && cachedProducts) {
         container.innerHTML = ''
-        container.appendChild(cachedComponent.cloneNode(true))
+        container.appendChild(ProductsSimilarList(cachedProducts))
 
         return true
     }
@@ -35,20 +34,15 @@ export async function loadProductsSimilar(container, useCache = true) {
         }
 
         const products = await loading
-
-        cachedProducts = products
-
-        const component = ProductsSimilarList(products)
-        cachedComponent = component
+        cachedProducts = products // uložíme pouze data
 
         container.innerHTML = ''
-        container.appendChild(component.cloneNode(true))
+        container.appendChild(ProductsSimilarList(products))
 
         return true
     } catch (error) {
         container.innerHTML = ComponentError()
         console.error(error)
-
         return false
     } finally {
         loading = null
